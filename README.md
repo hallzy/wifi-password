@@ -1,3 +1,5 @@
+[![Analytics](https://ga-beacon.appspot.com/UA-49189836-2/hallzy/wifi-password)](https://github.com/igrigorik/ga-beacon)
+
 # Wifi-Password
 
 Note: that this script requires root privileges. The files accessed are owned by
