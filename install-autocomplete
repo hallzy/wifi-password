@@ -1,0 +1,8 @@
+#!/bin/bash
+
+repo_home=$(pwd)
+
+cd /etc/bash_completion.d/
+
+sudo ln -sf "$repo_home"/get-wifi-password-autocomplete.sh
+
