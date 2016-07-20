@@ -1,7 +1,11 @@
 # Wifi-Password
 
-Note that this script requires root privileges. The files accessed are owned by
+Note: that this script requires root privileges. The files accessed are owned by
 root on Ubuntu.
+
+Note: I have only tested this script on Ubuntu. This script depends largely on
+if `/etc/NetworkManager/system-connections` exists, since this is where known
+networks are stored.
 
 This script returns wifi passwords to your prompt.
 
@@ -53,6 +57,29 @@ this repo.
 $ get-wifi-password <tab>
 mywifi    friends wifi    work wifi
 ```
+
+#### Forget a Network
+
+To forget a network so that the password is no longer saved:
+
+```bash
+$ get-wifi-password -rm mywifi
+```
+
+This will remove this connection and restart the network-manager service.
+Changes don't seem to take place until that service is restarted so it is
+essential in order to get the expected behaviour.
+
+If the script fails to remove the network due to some error or a typo it will
+let you know.
+
+Also if the network-manager fails to restart it will let you know. You may need
+to try to restart it yourself, or reboot your system for the changes to take
+effect.
+
+As with everything else, this also works with tab completion.
+
+#### Help
 
 The `-h` option gives some instructions for how to use the script as well.
 
